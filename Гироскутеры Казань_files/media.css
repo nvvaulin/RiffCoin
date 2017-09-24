@@ -1,0 +1,223 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    .navbar .nav-hidden {
+        display: block;
+    }
+
+    .navbar .displayed {
+        display: none;
+    }
+
+    header {
+        padding-bottom: 100px;
+    }
+
+    .maps .shop-img {
+        margin-top: 50px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    .main-page .circle-btn-arr {
+        display: none;
+    }
+
+    .gyro-pros {
+        padding-bottom: 80px;
+    }
+
+    .gyro-pros .characteristic {
+        margin: 10px 0;
+    }
+
+    .switcher .switch .sw-img {
+        height: 250px;
+    }
+
+    .product {
+        margin: 50px auto;
+    }
+
+    .contacts {
+        text-align: center;
+    }
+
+    .maps .purple-header {
+        font-size: 50px;
+        margin: 10px 0;
+    }
+
+    ul.advantages li {
+        float: left;
+        padding: 8px 10px;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+    ul.advantages li {
+        float: none;
+        color: #ffffff;
+    }
+
+    ul.advantages li i {
+        color: #ffffff;
+    }
+
+    .maps .map {
+        border-bottom: 1px solid #4b264f;
+    }
+
+    .navbar .logo-breaked {
+        display: block;
+        float: left;
+    }
+
+    .navbar .nav-hidden {
+        float: right;
+    }
+
+    .navbar ul.nav-left li {
+        padding: 15px 0;
+    }
+
+    .navbar .logo-breaked span {
+        color: #11141d;
+    }
+
+    .navbar .logo {
+        display: none;
+    }
+
+    .main-page .circle-btn {
+        display: none;
+    }
+
+    .main-page .btn {
+        width: 70%;
+        margin-top: -20px;
+    }
+
+    .gyro-pros {
+        padding-top: 180px;
+    }
+
+    .header, .gyro-pros .header {
+        font-size: 35px;
+        line-height: 1.3;
+    }
+
+    .characteristics-left, .characteristics-right {
+        text-align: center;
+
+    }
+
+    .characteristics-left .characteristic, .characteristics-right .characteristic {
+        margin: 10px auto;
+        width: 95%;
+    }
+
+    .characteristics-left .characteristic:nth-child(2), .characteristics-right .characteristic:nth-child(2) {
+        margin: 10px auto;
+    }
+
+    .special-offer .wrapper {
+        padding: 60px 0 120px;
+    }
+
+    .special-offer .gift {
+        max-width: 64%;
+    }
+
+    .free-gyro h1 {
+        font-size: 36px;
+    }
+
+    .switcher {
+        display: none;
+    }
+
+    .catalog {
+        padding: 40px 0;
+    }
+
+    .product {
+        margin: 20px auto;
+    }
+
+    .end-form .sub-header-beauty {
+        font-size: 18px;
+    }
+
+    .maps .map {
+        padding: 0;
+    }
+
+    .mg-t-90 {
+        margin-top: 20px;
+    }
+
+    .gyroscooter {
+        margin-top: 0;
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    .end-form .sub-header-beauty {
+        font-size: 16px;
+    }
+
+    .end-form form .btn-pink {
+        width: 100%;
+    }
+
+    .send-zayavka .prices {
+        width: 50%;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1281px) {
+    header {
+        background: url("main-plain.jpg") no-repeat center;
+        background-size: cover;
+        padding-bottom: 80px;
+    }
+
+    .circle-btn-arr {
+        bottom: -34px;
+    }
+}

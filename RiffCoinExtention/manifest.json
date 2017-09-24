@@ -1,0 +1,22 @@
+﻿{
+    "manifest_version": 2,
+
+    "name": "ReefCoin",
+    "version": "1.0",
+
+    "icons": {
+        "32": "32.png",
+        "48": "48.png"
+    },
+
+        "permissions": [
+             "http://translate.yandex.net/*","background","tabs"
+			 
+        ],
+
+    "browser_action": {
+        "default_title": "ReefCoinOrders",
+        "default_icon": "32.png",
+        "default_popup": "popup.html"
+    }
+ }

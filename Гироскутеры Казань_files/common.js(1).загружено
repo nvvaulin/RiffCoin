@@ -1,0 +1,365 @@
+$(document).ready(function () {
+
+    //Цели для Яндекс.Метрики и Google Analytics
+    $(".count_element").on("click", (function () {
+        ga("send", "event", "goal", "goal");
+        yaCounterXXXXXXXX.reachGoal("goal");
+        return true;
+    }));
+
+    //SVG Fallback
+    if (!Modernizr.svg) {
+        $("img[src*='svg']").attr("src", function () {
+            return $(this).attr("src").replace(".svg", ".png");
+        });
+    }
+
+
+    //Аякс отправка форм
+    //Документация: http://api.jquery.com/jquery.ajax/
+    $("#zayavka").submit(function (e) {
+        e.preventDefault;
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: $(this).serialize(),
+            cache: false,
+            timeout: 60000,
+            async: false,
+            success: function (data) {
+                $('#price').magnificPopup('close');
+                alert("Спасибо за заявку!");
+                setTimeout(function () {
+                    $.fancybox.close();
+                }, 1000);
+            }
+        });
+        $(this).find("input[type=text],input[type=tel], textarea").val("");
+        return false;
+    });
+
+    $("#consult").submit(function (e) {
+        e.preventDefault;
+        $.ajax({
+            type: "POST",
+            url: "mail2.php",
+            data: $(this).serialize(),
+            cache: false,
+            timeout: 60000,
+            async: false,
+            success: function (data) {
+                alert("Спасибо за заявку!");
+                setTimeout(function () {
+                    $.fancybox.close();
+                }, 1000);
+            }
+        });
+        return false;
+    });
+
+    $("#connect-form").submit(function (e) {
+        e.preventDefault;
+        $.ajax({
+            type: "POST",
+            url: "mail3.php",
+            data: $(this).serialize(),
+            cache: false,
+            timeout: 60000,
+            async: false,
+            success: function (data) {
+                alert("Спасибо за заявку!");
+                setTimeout(function () {
+                    $.fancybox.close();
+                }, 1000);
+            }
+        });
+        $(this).find("input.plain-inp").val("");
+        return false;
+    });
+
+    $(".gyro-pros").find(".characteristic").equalHeights();
+
+    $(".maps").find(".contacts").equalHeights();
+
+    if ($(window).width() >= 767) {
+        $(".products").find(".product-gyro").find(".prod-description").find(".prod-name").equalHeights();
+
+        $(".products").find(".product-gyro").find(".prod-description").find(".prod-txt").equalHeights();
+        $(".products").find(".prod-description").find(".prod-name-accessory").equalHeights();
+        $(".products").find(".prod-color").equalHeights();
+    }
+
+    $(".catalog").find(".prod-color").find("span").click(function () {
+        var dataId = $(this).attr("data-img-value");
+        $(dataId).siblings("img").removeClass("active");
+        $(this).siblings("span").removeClass("active");
+        $(dataId).addClass("active");
+        $(this).addClass("active");
+    });
+
+    /*$(".checkbox").attr("checked", false);
+
+     $(".prod-description").find("form").find(".checkbox").each(function () {
+     $(this).change(function () {
+     var price = $(this).attr("data-price");
+     var oldPrice = $(this).closest("form").find(".prod-price").html();
+     if ($(this).is(':checked')) {
+     var newPrice = parseInt(price) + parseInt(oldPrice);
+     } else {
+     newPrice = parseInt(oldPrice) - parseInt(price);
+     }
+     $(this).closest("form").find(".prod-price").html(newPrice);
+     $(this).closest("form").find(".prod-price-inp").val(newPrice);
+     })
+     });*/
+
+    $(".prod-circle-btn").click(function () {
+        var hidden = $(this).attr("data-href");
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+            $(hidden).removeClass("active");
+        } else {
+            $(this).addClass("active");
+            $(hidden).addClass("active");
+        }
+    });
+    $(".send-zayavka").magnificPopup();
+
+    $(".send-zayavka").click(function () {
+        var formId = $(this).parent().attr('id');
+        if ($(this).parent().is('form')) {
+            $('#zayavka').attr('data-form-id', formId);
+            var model = $(this).parent().siblings("h2").text();
+        } else {
+            model = $(this).siblings("h2").text();
+        }
+        $('.zayavka input[type=text][name=model]').val(model);
+    });
+
+
+    if ($(window).width() >= 1200) {
+        var stickyOffset = $('.main-page').offset().top;
+        $(window).scroll(function () {
+            var sticky = $('.navbar'),
+                scroll = $(window).scrollTop();
+
+            if (scroll >= stickyOffset) {
+                sticky.addClass('fixed');
+            } else {
+                sticky.removeClass('fixed');
+            }
+        });
+    }
+
+    $(".nav-item").mPageScroll2id({
+        scrollSpeed: 700
+    });
+
+    $(".switch").mPageScroll2id({
+        scrollSpeed: 600
+    });
+})
+;
+
+
+jQuery.fn.subHeader = function () {
+    var width = jQuery(this).width();
+    alert(width);
+    $(this).next().width(width);
+};
+
+jQuery.fn.equalHeights = function () {
+    var currentDivHeight = 0;
+    jQuery(this).each(function () {
+        if (jQuery(this).outerHeight() > currentDivHeight) {
+            currentDivHeight = jQuery(this).outerHeight();
+        }
+    });
+    jQuery(this).css({'height': currentDivHeight});
+    return this;
+};
+
+function google_maps_586579d759c58() {
+    var latlng = new google.maps.LatLng(55.793017, 49.150111);
+    var draggable = true;
+    var myOptions = {
+        zoom: 16,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: [{
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [{"color": "#e9e9e9"}, {"lightness": 17}]
+        }, {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [{"color": "#f5f5f5"}, {"lightness": 20}]
+        }, {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [{"color": "#ffffff"}, {"lightness": 17}]
+        }, {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [{"color": "#ffffff"}, {"lightness": 29}, {"weight": 0.2}]
+        }, {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [{"color": "#ffffff"}, {"lightness": 18}]
+        }, {
+            "featureType": "road.local",
+            "elementType": "geometry",
+            "stylers": [{"color": "#ffffff"}, {"lightness": 16}]
+        }, {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [{"color": "#f5f5f5"}, {"lightness": 21}]
+        }, {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [{"color": "#dedede"}, {"lightness": 21}]
+        }, {
+            "elementType": "labels.text.stroke",
+            "stylers": [{"visibility": "on"}, {"color": "#ffffff"}, {"lightness": 16}]
+        }, {
+            "elementType": "labels.text.fill",
+            "stylers": [{"saturation": 36}, {"color": "#333333"}, {"lightness": 40}]
+        }, {
+            "elementType": "labels.icon",
+            "stylers": [{"visibility": "off"}]
+        }, {
+            "featureType": "transit",
+            "elementType": "geometry",
+            "stylers": [{"color": "#f2f2f2"}, {"lightness": 19}]
+        }, {
+            "featureType": "administrative",
+            "elementType": "geometry.fill",
+            "stylers": [{"color": "#fefefe"}, {"lightness": 20}]
+        }, {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [{"color": "#fefefe"}, {"lightness": 17}, {"weight": 1.2}]
+        }],
+        draggable: draggable,
+        zoomControl: true,
+        mapTypeControl: false,
+        streetViewControl: false,
+        scrollwheel: false
+    };
+    var map = new google.maps.Map(document.getElementById("google-map-area-586579d759c58"), myOptions);
+    var marker = new google.maps.Marker({
+        position: latlng,
+        icon: "img/pointer.gif",
+        map: map
+    });
+    var contentString = '<div id="content">' +
+        '<div id="siteNotice">' +
+        '</div>' +
+        '<h3 id="firstHeading" class="firstHeading">г. Казань, ул. Н. Ершова, 1А, ТРК «Корстон», первый этаж</h3>' +
+        '</div>';
+
+    // Создаем информационное окно
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 400
+    });
+    // Создаем прослушивание, по клику на маркер - открыть инфо-окно infowindow
+    marker.addListener('click', function () {
+        infowindow.open(map, marker);
+    });
+    infowindow.open(map, marker);
+}
+function google_maps_586579d759c59() {
+    var latlng = new google.maps.LatLng(54.908459, 52.251555);
+    var draggable = true;
+    var myOptions = {
+        zoom: 16,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: [{
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [{"color": "#e9e9e9"}, {"lightness": 17}]
+        }, {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [{"color": "#f5f5f5"}, {"lightness": 20}]
+        }, {
+            "featureType": "road.highway",
+            "elementType": "geometry.fill",
+            "stylers": [{"color": "#ffffff"}, {"lightness": 17}]
+        }, {
+            "featureType": "road.highway",
+            "elementType": "geometry.stroke",
+            "stylers": [{"color": "#ffffff"}, {"lightness": 29}, {"weight": 0.2}]
+        }, {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [{"color": "#ffffff"}, {"lightness": 18}]
+        }, {
+            "featureType": "road.local",
+            "elementType": "geometry",
+            "stylers": [{"color": "#ffffff"}, {"lightness": 16}]
+        }, {
+            "featureType": "poi",
+            "elementType": "geometry",
+            "stylers": [{"color": "#f5f5f5"}, {"lightness": 21}]
+        }, {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [{"color": "#dedede"}, {"lightness": 21}]
+        }, {
+            "elementType": "labels.text.stroke",
+            "stylers": [{"visibility": "on"}, {"color": "#ffffff"}, {"lightness": 16}]
+        }, {
+            "elementType": "labels.text.fill",
+            "stylers": [{"saturation": 36}, {"color": "#333333"}, {"lightness": 40}]
+        }, {
+            "elementType": "labels.icon",
+            "stylers": [{"visibility": "off"}]
+        }, {
+            "featureType": "transit",
+            "elementType": "geometry",
+            "stylers": [{"color": "#f2f2f2"}, {"lightness": 19}]
+        }, {
+            "featureType": "administrative",
+            "elementType": "geometry.fill",
+            "stylers": [{"color": "#fefefe"}, {"lightness": 20}]
+        }, {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [{"color": "#fefefe"}, {"lightness": 17}, {"weight": 1.2}]
+        }],
+        draggable: draggable,
+        zoomControl: true,
+        mapTypeControl: false,
+        streetViewControl: false,
+        scrollwheel: false
+    };
+    var map = new google.maps.Map(document.getElementById("google-map-area-586579d759c59"), myOptions);
+    var marker = new google.maps.Marker({
+        position: latlng,
+        icon: "img/pointer.gif",
+        map: map
+    });
+    var contentString = '<div id="content">' +
+        '<div id="siteNotice">' +
+        '</div>' +
+        '<h3 id="firstHeading" class="firstHeading">г. Альметьевск, ул. Ленина, 140, ТЦ «Западный»</h3>' +
+        '</div>';
+
+    // Создаем информационное окно
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 400
+    });
+    // Создаем прослушивание, по клику на маркер - открыть инфо-окно infowindow
+    marker.addListener('click', function () {
+        infowindow.open(map, marker);
+    });
+    infowindow.open(map, marker);
+}
+$(document).ready(function ($) {
+    google_maps_586579d759c58();
+    google_maps_586579d759c59();
+});

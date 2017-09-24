@@ -1,0 +1,1240 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Pattaya');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+/*
+  purple : 4b264f
+  bej : d4a87a
+*/
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    min-width: 320px;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+a, a:hover, a:active, a:focus {
+    color: inherit;
+}
+
+.mg-t-20 {
+    margin-top: 20px;
+}
+
+.mg-t-50 {
+    margin-top: 50px;
+}
+
+.mg-t-90 {
+    margin-top: 90px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.btn {
+    display: block;
+    padding: 15px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 22px;
+    margin: 0 auto;
+}
+
+.btn-purple, .btn-purple:hover, .btn-purple:active, .btn-purple:focus {
+    background-color: #4b264f;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-pink {
+    border: none;
+    background-color: #df5f67;
+    font-weight: 900;
+}
+
+.tcenter {
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    background: url("main.png");
+    padding-bottom: 170px;
+    position: relative;
+}
+
+.navbar {
+    padding: 10px 0;
+    font-weight: 900;
+}
+
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(252, 192, 198, 1);
+    background: -moz-linear-gradient(-45deg, rgba(252, 192, 198, 1) 0%, rgba(252, 192, 198, 1) 24%, rgba(114, 72, 119, 1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(252, 192, 198, 1)), color-stop(24%, rgba(252, 192, 198, 1)), color-stop(100%, rgba(114, 72, 119, 1)));
+    background: -webkit-linear-gradient(-45deg, rgba(252, 192, 198, 1) 0%, rgba(252, 192, 198, 1) 24%, rgba(114, 72, 119, 1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(252, 192, 198, 1) 0%, rgba(252, 192, 198, 1) 24%, rgba(114, 72, 119, 1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(252, 192, 198, 1) 0%, rgba(252, 192, 198, 1) 24%, rgba(114, 72, 119, 1) 100%);
+    background: linear-gradient(135deg, rgba(252, 192, 198, 1) 0%, rgba(252, 192, 198, 1) 24%, rgba(114, 72, 119, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcc0c6', endColorstr='#724877', GradientType=1);
+    z-index: 9999;
+    box-shadow: 0px 8.66px 10px 0px rgba(0, 3, 1, 0.3);
+    padding-bottom: 0;
+}
+
+.navbar .nav {
+    display: inline-block;
+}
+
+.navbar .nav-left {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.navbar .nav-hidden {
+    display: none;
+}
+
+.navbar ul li {
+    float: left;
+}
+
+.navbar ul.nav-left li {
+    padding: 0 20px;
+}
+
+.navbar ul.nav-right li {
+    padding: 0 6px;
+}
+
+.navbar .nav-right a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.navbar .logo a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar .logo a span {
+    color: #ffffff;
+}
+
+.navbar .logo-breaked {
+    display: none;
+}
+
+.navbar.fixed ~ .main-page {
+    padding-top: 85.3px;
+}
+
+.pre-header, .header, .sub-header {
+    margin: 0;
+}
+
+.pre-header {
+    font-family: "Pattaya", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.pre-header.purple {
+    color: #4b264f;
+}
+
+.main-page .pre-header, .main-page .header {
+    line-height: 1.2;
+}
+
+.header {
+    font-size: 44px;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.header.black {
+    color: #000000;
+}
+
+.sub-header {
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 1;
+    font-size: 20px;
+}
+
+.sub-header.black {
+    color: #000000;
+}
+
+.main-page .sub-header {
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+.gyroscooter {
+    position: relative;
+    margin-top: -17px;
+}
+
+.gyroscooter img {
+    max-width: 772px;
+    width: 100%;
+}
+
+.circle-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.gyroscooter .circle-btn:hover {
+    width: 170px;
+    height: 170px;
+}
+
+.circle-btn .circle-in {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 100%;
+    background-color: #ffffff;
+    margin: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.gyroscooter .circle-btn:hover .circle-in {
+    width: 116px;
+    height: 116px;
+    margin: 27px;
+}
+
+.circle-btn .circle-in-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: #e9655e;
+    margin: 17.5px;
+    display: inline-block;
+}
+
+.gyroscooter .circle-btn:hover .circle-in-circle {
+    display: none;
+}
+
+.gyroscooter .circle-btn .circle-in-hidden {
+    display: none;
+}
+
+.gyroscooter .circle-btn:hover .circle-in-hidden {
+    color: #e9655e;
+    margin-top: 35%;
+    font-size: 12px;
+    font-weight: 900;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.gyroscooter .circle-btn {
+    position: absolute;
+    cursor: pointer;
+}
+
+.gyroscooter .circle-btn1 {
+    top: 5%;
+    left: 19%;
+}
+
+.gyroscooter .circle-btn1:hover {
+    top: 2%;
+    left: 15%
+}
+
+.gyroscooter .circle-btn2 {
+    top: 55%;
+    left: 25%;
+
+}
+
+.gyroscooter .circle-btn2:hover {
+    top: 45%;
+    left: 20%;
+
+}
+
+.gyroscooter .circle-btn3 {
+    right: 18%;
+    top: 42%;
+}
+
+.gyroscooter .circle-btn3:hover {
+    right: 14%;
+    top: 38%;
+}
+
+.gyroscooter .circle-btn4 {
+    left: 37%;
+    top: 35%;
+}
+
+.gyroscooter .circle-btn4:hover {
+    left: 32%;
+    top: 30%;
+}
+
+.gyroscooter .circle-btn5 {
+    right: 35%;
+    top: 19%;
+}
+
+.gyroscooter .circle-btn5:hover {
+    right: 30%;
+    top: 15%;
+}
+
+.main-page .btn {
+    width: 30%;
+    margin-top: -50px;
+    box-shadow: 0px 8.66px 10px 0px rgba(0, 3, 1, 0.3);
+    z-index: 99;
+    position: relative;
+}
+
+.advantages {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+ul.advantages li {
+    float: left;
+    padding: 8px 16px;
+}
+
+.advantages i {
+    padding-right: 3px;
+    font-weight: 400;
+    color: #4b264f;
+}
+
+.circle-btn-arr {
+    position: absolute;
+    bottom: 42px;
+    left: 48%;
+}
+
+.circle-btn-arr .circle-in-arrow {
+    color: #e9655e;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.circle-btn-arr .circle-in-arrow i {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 22px;
+}
+
+.gyro-pros {
+    background-color: #4b264f;
+    margin-top: -150px;
+    padding-top: 220px;
+    padding-bottom: 150px;
+}
+
+.gyro-pros .pre-header {
+    font-size: 30px;
+    color: #d4a87a;
+}
+
+.gyro-pros .header {
+    font-size: 48px;
+}
+
+.gyro-pros .sub-header span {
+    color: #d4a87a;
+}
+
+.gyro-pros .characteristic {
+    margin: 34px 0;
+}
+
+.gyro-pros .gyro-img {
+    margin-top: 74px; /*characteristic margin + 40px*/
+}
+
+.gyro-pros .characteristic .char-header {
+    font-family: "Pattaya", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #d4a87a;
+    margin: 0;
+}
+
+.gyro-pros .characteristic p {
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.characteristics-left {
+    text-align: right;
+}
+
+.characteristics-left .characteristic:nth-child(2) {
+    margin-right: 40px;
+}
+
+.characteristics-right {
+    text-align: left;
+}
+
+.characteristics-right .characteristic:nth-child(2) {
+    margin-left: 40px;
+}
+
+.special-offer {
+    background-color: #4b264f;
+
+}
+
+.special-offer .wrapper {
+    transform: skew(0deg, 10deg);
+    -ms-transform: skew(0deg, 10deg); /* IE 9 */
+    -webkit-transform: skew(0deg, 5deg); /* Safari and Chrome */
+    background-color: #ffffff;
+    padding: 84px 0 140px;
+    -webkit-box-shadow: 2px -5px 24px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px -5px 24px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px -5px 24px -8px rgba(0, 0, 0, 0.75);
+    overflow-x: hidden;
+}
+
+.special-offer .container {
+    transform: skew(0deg, -10deg);
+    -ms-transform: skew(0deg, -10deg); /* IE 9 */
+    -webkit-transform: skew(0deg, -5deg); /* Safari and Chrome */
+}
+
+.special-offer .gift {
+    display: inline-block;
+}
+
+.special-offer .gift p {
+    font-weight: 300;
+    margin: 34px auto;
+    text-align: center;
+}
+
+.free-gyro {
+    margin-top: -60px;
+    background-color: #11141d;
+    color: #FFFFFF;
+    position: relative;
+    padding-top: 60px;
+}
+
+.free-gyro h1 {
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+.free-gyro h1 span {
+    font-family: "Pattaya", sans-serif;
+    color: #d4a87a;
+}
+
+.free-gyro .btn {
+    margin-top: 60px;
+    width: 300px;
+    -webkit-box-shadow: 0px 0px 34px -15px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 34px -15px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 34px -15px rgba(255, 255, 255, 1);
+}
+
+.free-gyro img {
+    margin-top: 26px;
+}
+
+.free-gyro .more-info {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0;
+}
+
+.free-gyro .more-info a {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.switcher {
+    background: url("switches.jpg") center;
+    padding: 40px 0;
+}
+
+.switcher .switch {
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+}
+
+.switcher .switch .sw-img {
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.switcher .switch .switch1 {
+    background-image: url("gyro-switch.png");
+}
+
+.switcher .switch .switch1:hover, .switcher .switch .switch1.active {
+    background-image: url("gyro-switch-hover.png");
+}
+
+.switcher .switch .switch2 {
+    background-image: url("wheel-switch.png");
+}
+
+.switcher .switch .switch2:hover {
+    background-image: url("wheel-switch-hover.png");
+}
+
+.switcher .switch .switch3 {
+    background-image: url("helmet-switch.png");
+}
+
+.switcher .switch .switch3:hover {
+    background-image: url("helmet-switch-hover.png");
+}
+
+.switcher .switch p {
+    margin-top: 38px;
+    font-size: 30px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.catalog {
+    background-color: #e7e7e6;
+    padding: 100px 0 60px;
+}
+
+.header-beauty {
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.sub-header-beauty {
+    font-family: "Pattaya", sans-serif;
+    color: #d4a87a;
+    text-align: right;
+    margin: 0 auto;
+    font-size: 30px;
+}
+
+.sub-header-beauty .pink {
+    color: #df5f67;
+}
+
+.checkbox {
+    vertical-align: top;
+    margin: 0 3px 0 0;
+    width: 17px;
+    height: 17px;
+}
+
+.checkbox + label {
+    cursor: pointer;
+}
+
+.checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox:not(checked) + label {
+    position: relative;
+    padding: 0 0 0 60px;
+}
+
+.checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background: #CDD1DA;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, .2);
+}
+
+.checkbox:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    transition: all .2s;
+}
+
+.checkbox:checked + label:before {
+    background: #4b264f;
+}
+
+.checkbox:checked + label:after {
+    left: 26px;
+}
+
+.product {
+    max-width: 360px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    box-shadow: 5px 8.66px 50px 0px rgba(0, 3, 1, 0.65);
+}
+
+.product-gyro {
+    margin: 80px 0;
+}
+
+.prod-img, .prod-description, .prod-hidden-description {
+    padding: 24px;
+}
+
+.prod-img {
+    height: 260px;
+    position: relative;
+}
+
+.prod-img img {
+    max-height: 100%;
+    margin: 0 auto;
+}
+
+.prod-img .prod-gyro-img {
+    display: none;
+}
+
+.prod-img .prod-gyro-img.active {
+    display: block;
+}
+
+.prod-img .icons {
+    position: absolute;
+}
+
+.prod-img .icons-right {
+    right: 24px;
+    bottom: 24px;
+    width: 113px;
+}
+
+.icons .icon {
+    margin: 7px;
+}
+
+.icons .icon:hover {
+    height: 34px;
+    margin: 5px;
+}
+
+.icon + .icon-desc {
+    display: none;
+    text-align: left;
+    background-color: #ffffff;
+    color: #4b264f;
+    border: 1px solid #eeeeee;
+    padding: 4px;
+    line-height: 1.1;
+    position: absolute;
+    top: -50px;
+    left: 0;
+}
+
+.icon:hover + .icon-desc {
+    display: block;
+}
+
+.hit-icon {
+    width: 82px;
+    top: 12px;
+    right: 12px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.prod-description {
+    background: url("../img/product.jpg");
+    background-size: cover;
+    text-align: left;
+    position: relative;
+}
+
+.prod-description .prod-name {
+    text-align: left;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.prod-description .prod-name-accessory {
+    display: inherit;
+    text-align: center;
+    font-size: 25px;
+}
+
+.prod-description .label {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 18px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.product-gyro .btn {
+    margin-top: 16px;
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+}
+
+.send-zayavka p {
+    float: left;
+    width: 50%;
+    text-align: right;
+}
+
+.send-zayavka .prices {
+    float: left;
+    width: 36%;
+}
+
+.prices .prod-price {
+    line-height: 1.1;
+}
+
+.prices .old-price {
+    text-decoration: line-through;
+}
+
+.prices .new-price {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.radio {
+    display: none;
+}
+
+.prod-color span {
+    width: 18px;
+    height: 18px;
+    background-color: #efefef;
+    border-radius: 100%;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.prod-color span.active {
+    width: 22px;
+    height: 22px;
+}
+
+.prod-color#smart-q7 span:nth-child(2) {
+    background-image: url("../img/smart-q7/colors/264ad632.jpg");
+}
+
+.prod-color#smart-q7 span:nth-child(3) {
+    background-image: url("../img/smart-q7/colors/432.jpg");
+}
+
+.prod-color#smart-q7 span:nth-child(4) {
+    background-image: url("../img/smart-q7/colors/full_archetype_graffiti_01-800x8002.jpg");
+}
+
+.prod-color#smart-q7 span:nth-child(5) {
+    background-image: url("../img/smart-q7/colors/full_Lightning_colour_phunkee_duck_IO_Hawk_cheap-600x600_enl.jpg");
+}
+
+.prod-color.smart-allroad span, .prod-color#new-design span {
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+}
+
+.prod-color.smart-allroad span.active, .prod-color#new-design span.active {
+    width: 18px;
+    height: 18px;
+}
+
+.prod-color.smart-allroad span:nth-child(2) {
+    background-image: url("../img/allroad-q10/colors/7.jpg");
+}
+
+.prod-color.smart-allroad span:nth-child(3) {
+    background-image: url("../img/allroad-q10/colors/9.jpg");
+}
+
+.prod-color.smart-allroad span:nth-child(4) {
+    background-image: url("../img/allroad-q10/colors/10-inch-self-balancing-scooter-dance-design0d0cc5c8-f201-46.jpg");
+}
+
+.prod-color.smart-allroad span:nth-child(5) {
+    background-image: url("../img/allroad-q10/colors/10-inch-self-balancing-scooter-fire-colorea68d792-45c2-45f8.jpg");
+}
+
+.prod-color.smart-allroad span:nth-child(6) {
+    background-image: url("../img/allroad-q10/colors/10-inch-self-balancing-scooter-graffiti-color1cf42560-5917-.jpg");
+}
+
+.prod-color.smart-allroad span:nth-child(7) {
+    background-image: url("../img/allroad-q10/colors/giroskuter-suv-10-chernyj-karbon.jpg");
+}
+
+.prod-color.smart-allroad span:nth-child(8) {
+    background-image: url("../img/allroad-q10/colors/smart_wheel_suv_pirat-500x500.jpg");
+}
+
+.prod-color#new-design span:nth-child(2) {
+    background-image: url("../img/new-design/colors/KBaka8EKNJ4.jpg");
+}
+
+.prod-color#new-design span:nth-child(3) {
+    background-image: url("../img/new-design/colors/436.jpg");
+}
+
+.prod-color#new-design span:nth-child(4) {
+    background-image: url("../img/new-design/colors/f70557def853ec1f2.jpg");
+}
+
+.prod-color#new-design span:nth-child(5) {
+    background-image: url("../img/new-design/colors/f85057dee7e8e5e48.jpg");
+}
+
+.prod-color#new-design span:nth-child(6) {
+    background-image: url("../img/new-design/colors/giroskuter-new-wheel-10-premium-krasnyy-1.jpg");
+}
+
+.prod-color#new-design span:nth-child(7) {
+    background-image: url("../img/new-design/colors/sb10n_lightning-653x400.jpg");
+}
+
+.prod-color#new-design span:nth-child(8) {
+    background-image: url("../img/new-design/colors/21_56bd1b2d9a8286df434c4c69418d7474.jpg");
+}
+
+.prod-color#hammer span:nth-child(2) {
+    background-image: url("../img/hammer/colors/03_9a0HZIF.jpg");
+}
+
+.prod-color#citycoco span:nth-child(2) {
+    background-image: url("../img/citycoco/colors/foto-elektrobajk-seev-citycoco-9-500x500.jpg");
+}
+
+.prod-color#xiaomi span:nth-child(2) {
+    background-image: url("../img/xiaomi/colors/xiaomi-ninebot-mini-self-balancing-scooter-white-03_13868_1449560511.jpg");
+}
+
+.prod-color#ruller span:nth-child(2) {
+    background-image: url("../img/ruller/colors/segway_electrotown_m2_upcar_black.jpg");
+}
+
+.prod-color#segway span:nth-child(2) {
+    background-image: url("../img/segway/colors/img133204_33316_big.jpg");
+}
+
+.prod-color#e2 span:nth-child(2) {
+    background-image: url("../img/e2/colors/5e43902ff5156b4b25da67be0e0c38c4-700x700.jpg");
+}
+
+.prod-description .prod-adds {
+    margin: 16px 0;
+}
+
+.prod-description .prod-adds label {
+    color: #4b264f;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.prod-description .prod-txt {
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 300;
+}
+
+.prod-description form .btn {
+    cursor: pointer;
+}
+
+.product h4 {
+    font-family: "Pattaya", sans-serif;
+    color: #4b264f;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.prod-circle-btn {
+    position: absolute;
+    left: 40%;
+    bottom: -40px;
+    z-index: 999;
+}
+
+.prod-circle-btn .circle-in-arrow {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.prod-circle-btn.active .circle-in-arrow {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.prod-hidden-description {
+    background-color: #ffffff;
+    box-shadow: 5px 8.66px 50px 0px rgba(0, 3, 1, 0.65);
+    padding-top: 50px;
+    max-width: 360px;
+    position: absolute;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+    display: none;
+}
+
+.prod-hidden-description.active {
+    display: block;
+}
+
+ul.specification {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+ul.specification li {
+    border-bottom: 1px dotted #C2C2C2; /* Необязателен. Здесь задается толщина, тип и цвет точек */
+    position: relative;
+    padding: 0;
+    margin-bottom: 5px; /* Необязателен. Задается для установки расстояния между блоками li */
+}
+
+ul.specification li span {
+    background-color: #FFF; /* Это необходимо, чтобы перекрыть точки фоном */
+    margin: 0;
+}
+
+ul.specification li span.text, ul.specification li span.num {
+    bottom: -5px; /* Смещаем значимые блоки, чтобы они перекрыли точки */
+}
+
+ul.specification span.text {
+    position: relative;
+    margin-right: 7em; /* Задается чтобы текст не заходил на номера страниц */
+    padding-right: 2px; /* Необязателен. Задается чтобы точки не подходили вплотную к концу текста */
+    text-transform: uppercase;
+}
+
+ul.specification span.num {
+    position: absolute;
+    right: 0;
+    padding-left: 2px; /* Необязателен. Задается чтобы точки не подходили вплотную к номерам страниц */
+}
+
+.end-form {
+    background-color: #4b264f;
+    padding: 95px 0;
+    color: #ffffff;
+}
+
+.end-form .sub-header-beauty {
+    font-size: 24px;
+    text-align: center;
+}
+
+input.plain-inp {
+    border: none;
+    opacity: 1;
+    width: 100%;
+    margin-top: 10px;
+    padding: 18px 0;
+    border-bottom: 2px solid;
+
+}
+
+.end-form form input.plain-inp {
+    background-color: #4b264f;
+    border-bottom-color: #FFFFFF;
+}
+
+.end-form form .btn-pink {
+    width: 80%;
+    -webkit-box-shadow: 0px 0px 34px -15px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 34px -15px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 34px -15px rgba(255, 255, 255, 1);
+}
+
+.end-form form .check-inp {
+    float: left;
+    background: #4b264f;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.end-form form .check-inp + label {
+    float: left;
+    font-weight: 300;
+    margin-top: 7px;
+
+}
+
+.right-border {
+    border-right: 1px solid #ffffff;
+}
+
+.end-form .subscribe {
+    font-weight: 300;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.subscribe ~ .sub-header-beauty {
+    text-align: left;
+}
+
+.maps {
+    background-color: #e7e7e6;
+}
+
+.maps .purple-border-right {
+    border-right: 1px solid #4b264f;
+}
+
+.maps .google-map {
+    height: 500px;
+}
+
+.maps .purple-header {
+    font-family: "Pattaya", sans-serif;
+    font-size: 60px;
+    color: #4b264f;
+}
+
+.maps .map {
+    padding: 0 50px 60px;
+}
+
+.map p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.map .purple-nums {
+    font-weight: 300;
+    color: #4b264f;
+}
+
+.shop-img img {
+    height: 405px;
+}
+
+footer {
+    padding: 36px 0 72px;
+    background-color: #0a0919;
+}
+
+footer .sub-header-beauty {
+    text-align: center;
+}
+
+.logo-breaked {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.logo-breaked span {
+    font-weight: 400;
+    color: #848182;
+}
+
+.logo-green img {
+    height: 140px;
+    float: right;
+    margin-top: -20px;
+}
+
+.social {
+    background-image: url("../img/social.jpg");
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+.social#youtube {
+    background-position: 12% 50%;
+}
+
+.social#vk {
+    background-position: 50% 50%;
+}
+
+.social#inst {
+    background-position: 85% 50%;
+}
+
+.payment {
+    text-align: right;
+}
+
+.zayavka {
+    background-color: #FFFFFF;
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 400px;
+    padding-bottom: 25px;
+    position: relative;
+}
+
+.zayavka .header {
+    background: url("../img/product.jpg");
+    padding: 25px;
+    font-size: 30px;
+}
+
+.zayavka .header span {
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.zayavka .inps {
+    padding: 25px;
+}
+
+.zayavka .plain-inp, .zayavka input:required:valid {
+    border-bottom-color: #4b264f;
+    color: #4b264f;
+    font-weight: 700;
+}
+
+.zayavka .check-inp {
+    margin-top: 20px;
+    margin-right: 8px;
+}
+
+.zayavka .check-inp + label {
+    font-size: 13px;
+}
+
+.zayavka .btn {
+    cursor: pointer;
+    width: 87%;
+    margin-top: 25px;
+    border: none;
+}
+
+.photos iframe,
+.video iframe {
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    overflow: hidden;
+    height: 488px;
+}
+
+/*override*/
+.mfp-bg {
+    opacity: 0.4;
+}
+
+.mfp-close-btn-in .mfp-close {
+    font-size: 36px;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+    color: red;
+}
+
+body input:required:valid,
+body textarea:required:valid {
+    color: green;
+}
+
+.hidden {
+    display: none;
+}

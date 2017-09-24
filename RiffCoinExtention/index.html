@@ -1,0 +1,88 @@
+<head>
+<style>
+	.modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top: 100px; /* Location of the box */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+   background-color: #fefefe ;
+   margin: auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 80%;
+}
+</style>
+</head>
+<body>
+
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+ <!-- Modal content -->
+ <div class="modal-content" style="width: 500px" style="height: 300px;">
+ <!DOCTYPE html>
+<html>
+<head>
+    <script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-4.0.0-alpha.6-dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+</head>
+<body>
+ <div class="container">
+<form class="form-signin">
+<table>
+<tr>
+    <td style="text-align:right" > <label for="exampleInputEmail1" >Заказ: </label> </td> <td> <label for="exampleInputEmail1">SMART ALLROAD Q10</label> </td>
+</tr><tr>
+    <td style="text-align:right" > <label for="exampleInputEmail1">Стоимость заказа: </label> </td> <td> <label for="exampleInputEmail1">10.999 RFC</label> </td>
+</tr>
+</table>
+    <label for="exampleSelect1">Доступные арбитры:</label>
+    <select class="form-control" id="exampleSelect1">
+      <option>AMK Group 0.01 RFC</option>
+      <option>Elice-Bob 0.03 RFC</option>
+      <option>Gendolf 0.10 RFC</option>
+    </select>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" id="myBtn2" style="margin-top:10px">Подтвердить</button>
+</form>
+</div> 
+</body>
+</html>
+ </div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var btn2 = document.getElementById("myBtn2");
+
+btn.onclick = function() {
+   modal.style.display = "block";
+}
+btn2.onclick = function() {
+   modal.style.display = "none";
+}
+
+</script>
+
+</body>
